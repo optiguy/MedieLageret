@@ -1,0 +1,100 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="MedieLageret.Site" %>
+<%@ Register Src="~/CartView.ascx" TagPrefix="uc1" TagName="CartView" %>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="../Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="../Content/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="../Content/font-awesome.min.css" rel="stylesheet" />
+    <link href="../Content/style.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="CPH_Head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="pageForm" runat="server">
+        <!-- Wrapper for the page -->
+        <div class="container">
+
+            <!-- Header with logo, cart & profile -->
+            <header class="row">
+                <div class="col-xs-4">
+                    <asp:ImageButton ID="ImageButton1" runat="server" CssClass="img-responsive" ImageUrl="~/Images/medielageret.png" PostBackUrl="~/Default.aspx" />
+                </div>
+                <div class="col-xs-2 col-xs-offset-4">
+                    <!-- Button trigger modal -->
+                    <a>
+                        <i class="fa fa-shopping-cart fa-2x" aria-hidden="true" data-toggle="modal" data-target="#shoppingCart"></i>
+                    </a>
+                    <!-- Modal -->
+                    <div class="modal fade" id="shoppingCart" tabindex="-1" role="dialog" aria-labelledby="myCartLabel">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    <h4 class="modal-title" id="myCartLabel">Indkøbskurv</h4>
+                                </div>
+                                <div class="modal-body">
+                                    Du har i øjeblikket ingen produkter i kurven!
+                                    <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Luk</button>
+                                    <button type="button" class="btn btn-primary">Til kassen</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-2">
+                    <a href="#">
+                        <i class="fa fa-user fa-2x" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </header>
+
+            <main class="row">
+                <asp:ContentPlaceHolder ID="CPH_Main" runat="server"></asp:ContentPlaceHolder>
+                <div class="col-xs-12">
+                    <uc1:CartView runat="server" id="CartView" />
+                </div>
+            </main>
+
+            <!-- Footer with links -->
+            <footer class="row text-center">
+                <div class="col-xs-2 col-xs-offset-2">
+                    <a href="#">Betingelser<br />
+                        <i class="fa fa-asterisk fa-2x" aria-hidden="true"></i>
+                    </a>
+                </div>
+                <div class="col-xs-2">
+                    <a href="#">
+                        <br />
+                        <i class="fa fa-facebook fa-2x" aria-hidden="true"></i>
+                    </a>
+                </div>
+                <div class="col-xs-2">
+                    <a href="#">
+                        <br />
+                        <i class="fa fa-twitter fa-2x" aria-hidden="true"></i>
+                    </a>
+                </div>
+                <div class="col-xs-2">
+                    <a href="#">Kontakt<br />
+                        <i class="fa fa-phone fa-2x" aria-hidden="true"></i>
+                    </a>
+                </div>
+                <div class="row text-center">
+                    <div class="col-xs-12">
+                        <p>Copyright 2016 - Cvr Nr. 15 84 65 31 - Tlf. 45 85 74 85</p>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+    </form>
+    <!-- Loading scripts -->
+    <script src="../Scripts/jquery-1.9.1.min.js"></script>
+    <script src="../Scripts/bootstrap.min.js"></script>
+</body>
+</html>
