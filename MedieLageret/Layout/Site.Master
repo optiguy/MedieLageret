@@ -35,12 +35,11 @@
                                     <h4 class="modal-title" id="myCartLabel">Indkøbskurv</h4>
                                 </div>
                                 <div class="modal-body">
-                                    Du har i øjeblikket ingen produkter i kurven!
-                                    <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                                    <uc1:CartView runat="server" id="CartView" />
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-default" data-dismiss="modal">Luk</button>
-                                    <button type="button" class="btn btn-primary">Til kassen</button>
+                                    <asp:LinkButton CssClass="btn btn-primary" PostBackUrl="~/CheckOut.aspx" runat="server">Til kassen</asp:LinkButton>
                                 </div>
                             </div>
                         </div>
@@ -54,9 +53,8 @@
             </header>
 
             <main class="row">
-                <asp:ContentPlaceHolder ID="CPH_Main" runat="server"></asp:ContentPlaceHolder>
                 <div class="col-xs-12">
-                    <uc1:CartView runat="server" id="CartView" />
+                    <asp:ContentPlaceHolder ID="CPH_Main" runat="server"></asp:ContentPlaceHolder>
                 </div>
             </main>
 

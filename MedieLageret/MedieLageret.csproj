@@ -75,6 +75,7 @@
   <ItemGroup>
     <Content Include="CartView.ascx" />
     <Content Include="Category.aspx" />
+    <Content Include="CheckOut.aspx" />
     <Content Include="Layout\Site.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -130,6 +131,13 @@
     </Compile>
     <Compile Include="CartView.ascx.designer.cs">
       <DependentUpon>CartView.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CheckOut.aspx.cs">
+      <DependentUpon>CheckOut.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CheckOut.aspx.designer.cs">
+      <DependentUpon>CheckOut.aspx</DependentUpon>
     </Compile>
     <Compile Include="Database.cs" />
     <Compile Include="Cart.cs" />

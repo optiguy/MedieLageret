@@ -10,51 +10,33 @@
 namespace MedieLageret {
     
     
-    public partial class Site {
+    public partial class CheckOut {
         
         /// <summary>
-        /// CPH_Head control.
+        /// Literal_message control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder CPH_Head;
+        protected global::System.Web.UI.WebControls.Literal Literal_message;
         
         /// <summary>
-        /// pageForm control.
+        /// CheckBox_terms control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm pageForm;
+        protected global::System.Web.UI.WebControls.CheckBox CheckBox_terms;
         
         /// <summary>
-        /// ImageButton1 control.
+        /// LinkButton_accept_and_buy control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton ImageButton1;
-        
-        /// <summary>
-        /// CartView control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::MedieLageret.CartView CartView;
-        
-        /// <summary>
-        /// CPH_Main control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder CPH_Main;
+        protected global::System.Web.UI.WebControls.LinkButton LinkButton_accept_and_buy;
     }
 }

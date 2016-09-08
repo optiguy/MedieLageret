@@ -56,7 +56,7 @@ namespace MedieLageret
                     foreach (CartProduct product in this.products)
                     {
                         db.Insert("Order_items", new Dictionary<string, object> {
-                            {"order_id", orderId},
+                            {"order_id", orderId}, 
                             {"product_id", product.Id},
                             {"price", product.Price},
                             {"amount", product.Amount}

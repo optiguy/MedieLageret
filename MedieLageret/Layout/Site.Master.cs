@@ -13,10 +13,5 @@ namespace MedieLageret
         {
 
         }
-
-        protected void Button1_Click(object sender, EventArgs e)
-        {
-            TextBox1.Text = "Testing 1 2 3";
-        }
     }
 }
