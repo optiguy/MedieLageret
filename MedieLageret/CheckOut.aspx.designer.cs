@@ -13,6 +13,15 @@ namespace MedieLageret {
     public partial class CheckOut {
         
         /// <summary>
+        /// CartView control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::MedieLageret.CartView CartView;
+        
+        /// <summary>
         /// Literal_message control.
         /// </summary>
         /// <remarks>

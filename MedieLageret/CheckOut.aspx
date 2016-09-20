@@ -1,9 +1,14 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Layout/Site.Master" AutoEventWireup="true" CodeBehind="CheckOut.aspx.cs" Inherits="MedieLageret.CheckOut" %>
 
+<%@ Register Src="~/CartView.ascx" TagPrefix="uc1" TagName="CartView" %>
+
+
 <asp:Content ID="Content1" ContentPlaceHolderID="CPH_Head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="CPH_Main" runat="server">
-    <asp:Literal ID="Literal_message" runat="server"></asp:Literal><div class="checkbox">
+    <uc1:CartView runat="server" ID="CartView" interactionsAllowed="false" />
+    <asp:Literal ID="Literal_message" runat="server"></asp:Literal>
+    <div class="checkbox">
         <label>
             <asp:CheckBox ID="CheckBox_terms" runat="server" />
             Accepter betingelser for køb
